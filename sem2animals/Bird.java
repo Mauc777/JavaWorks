@@ -9,10 +9,15 @@ public class Bird extends Animal {
 
     @Override
     public void voice() {
-        System.out.println(name + " Чык -чырык )) ");
+        tweet();
     }
 
     public void walk() {
         System.out.println(name + " изредка ходит на ножках ");
     }
+
+    void tweet(){
+        System.out.println(name + " Чык -чырык )) ");
+    }
 }
+

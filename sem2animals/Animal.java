@@ -1,5 +1,7 @@
 public abstract class Animal {
     protected String name;
+
+
     protected String color;
     protected int age;
 
@@ -9,13 +11,20 @@ public abstract class Animal {
         this.age = age;
     }
 
-    // Умение у всех животных --> ходить
-    public void walk() {
-        System.out.println(name + " Ходит на лапах  - шустро");
-    }
+    // Метод добавления нового animal -- Доделать!!!
+    // public void animalAdd(Animal... animal){
+    //     Animal.add(animal);
+    //     System.out.println("sdvs");
+    // }
 
-    // Данный метод уже АБСТРАКТНЫЙ т.к хочу на примере него показать и применить
-    // возможности абстрактных методов
+    // Умение у всех животных --> ходить ПО СВОЕМУ , сделаем метод абстрактным
+    public abstract void walk();
+
+    // Данный метод  АБСТРАКТНЫЙ 
     public abstract void voice();
+
+    public String getName() {
+        return name;
+    }
 
 }
