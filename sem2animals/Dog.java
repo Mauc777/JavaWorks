@@ -4,12 +4,20 @@ public class Dog extends Animal {
         super(name, color, age);
     }
 
-    @Override
-    public void voice() {
-        System.out.println(name + " Гаф -Маф ");
-    }
-
     public void walk() {
         System.out.println(name + " Ходит на лапах, туда сюда обратно! ");
     }
+    
+    @Override
+    public void voice() {
+        voiceDogs();;
+    }
+
+
+    void voiceDogs(){
+        System.out.println(name + " Гаф -Маф "+ age + " лет");
+    }
+
+    
 }
+
