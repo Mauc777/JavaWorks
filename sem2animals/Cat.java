@@ -5,26 +5,21 @@ public class Cat extends Animal implements Voice {
         super(name, color, age);
     }
 
-    public Cat(String name, String color, int age,Voice v) {
+    public Cat(String name, String color, int age, Voice v) {
         super(name, color, age);
         this.v = v;
     }
 
     @Override
     public void voice() {
-        // meow();
-    }
+        System.out.println("Мурлык ми  -- 11");
+        super.voice();
 
+    }
 
     @Override
     public void walk() {
         System.out.println(name + " Очень КЛАССНО ходит на лапках");
     }
 
-  
-    // void meow(){
-    //     v.voice();
-    // }
-
-   
 }
