@@ -43,7 +43,8 @@ public class Human {
     // для каждого Жевотного собаки, кошки и т д. мы обращаемся к конкретному питомцу (как к элементу массива)
     // и зовем его.
     void call(){
-       System.out.println("///");  // строка просто для сверки
+        System.out.println("\n");
+       System.out.println("Друг , иди ко мне ");  // строка просто для сверки
        for (Animal animal : animals) {
         if(animal instanceof Cat){
             animal.voice();
@@ -52,6 +53,10 @@ public class Human {
         if(animal instanceof Dog){
             animal.voice();
             System.out.println(animal.getName() + " Хороший Собакен");
+        }
+        if (animal instanceof Bird){
+            animal.voice();
+            System.out.println(animal.getName() + " Отлично, дружок , свистать всех на палубу ");
         }
        }
     }
