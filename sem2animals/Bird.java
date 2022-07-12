@@ -3,7 +3,7 @@ public class Bird extends Animal implements Voice {
     String wings;
     Voice v;
 
-    Bird(String name, String color, int age, String wings) {
+    Bird(String name, String color, int age,String wings) {
         super(name, color, age); 
     }
 
@@ -24,7 +24,12 @@ public class Bird extends Animal implements Voice {
     public void walk() {
         System.out.println(name + " изредка ходит на лапках ");
     }
+ 
+    public String getWings() {
+        return wings;
+    }
 
+  
 
 }
 

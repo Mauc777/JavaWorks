@@ -3,6 +3,7 @@ public abstract class Animal {
     protected String color;
     protected int age;
 
+   
     Animal(String name, String color, int age) {
         this.name = name;
         this.color = color;
@@ -18,9 +19,8 @@ public abstract class Animal {
     // Умение у всех животных --> ходить ПО СВОЕМУ , сделаем метод абстрактным
     public abstract void walk();
 
-    // @Override
+  
     public void voice() {
-        // System.out.println("Animal Voice -- 1 ");
 
     }
 
@@ -28,4 +28,19 @@ public abstract class Animal {
         return name;
     }
 
+
+    @Override
+    public String toString(){
+        return "Animal [name = " + getName() 
+                + ", age = " + getAge()
+                + ", color = " + getColor()  + "]";
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }

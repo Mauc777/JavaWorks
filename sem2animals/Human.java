@@ -24,11 +24,7 @@ public class Human {
         }
     }
 
-    public void removeAnim(){
-        for (Animal animal : animals) {
-            animals.remove(animal);
-        }
-    }
+  
 
     // Базовый Конструктор Человека
     Human (int id, String name, String role, int age ){
@@ -60,4 +56,10 @@ public class Human {
         }
        }
     }
+
+    // public void removeAnimal(){
+    //     for (Animal animal : animals) {
+    //         animals.remove(animal);
+    //     }
+    // }
 }
