@@ -1,8 +1,49 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-public abstract class Animal  {
+public abstract class Animal implements Iterator<String>  {
     protected String name;
     protected String color;
     protected int age;
+
+
+    int index;
+    
+    
+    
+    @Override
+    public boolean hasNext() {
+        return index++ < 3;
+    }
+
+    @Override
+    public String next() {
+  
+        switch (index) {
+            case 1:
+                return String.format("Имя: %s", getName()); 
+            case 2:
+                return String.format("Цвет: %s", getColor());  
+
+            default:
+                return  String.format("Возрост: %d", getAge()); 
+        }
+       
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
     Animal(String name, String color, int age) {
@@ -36,5 +77,6 @@ public abstract class Animal  {
     public String getColor() {
         return color;
     }
+
 
 }
